@@ -8,6 +8,7 @@ const Home = require('./Home');
 const Nav = require('./Nav');
 const Popular = require('./Popular');
 const Battle = require('./Battle');
+const Results = require('./Results');
 
 class App extends React.Component {
   render () {
@@ -20,6 +21,7 @@ class App extends React.Component {
             {/* exact requires that path must match what is specified to be active */}
             <Route exact path="/" component={Home} />
             <Route exact path='/battle' component={Battle} />
+            <Route path='/battle/results' component={Results} />
             {/* default path will render for as long as path is active */}
             <Route path='/popular' component={Popular} />
             {/* render UI if path not found */}

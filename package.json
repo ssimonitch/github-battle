@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "create": "webpack",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "build": "NOVE_ENV='proudction' webpack -p",
+    "deploy": "npm run build && firebase deploy",
+    "firebase-init": "firebase login && firebase init"
   },
   "author": "Steven Simonitch",
   "license": "MIT",
@@ -21,6 +24,7 @@
     "babel-preset-env": "^1.2.2",
     "babel-preset-react": "^6.23.0",
     "css-loader": "^0.27.3",
+    "firebase-tools": "^3.9.1",
     "html-webpack-plugin": "^2.28.0",
     "style-loader": "^0.16.0",
     "webpack": "^2.3.1",
@@ -28,6 +32,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "query-string": "^4.3.4",
     "react": "^16.0.0-alpha.5",
     "react-dom": "^16.0.0-alpha.5",
     "react-router-dom": "^4.1.1"
