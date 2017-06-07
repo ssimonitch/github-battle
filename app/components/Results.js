@@ -14,7 +14,7 @@ function Profile(props) {
     <PlayerPreview avatar={info.avatar_url} username={info.login}>
       <ul className='space-list-items'>
         {/* only render name, location, and company if public */}
-        {info.name && <li>{info.name}</li>}
+        {info.name && <li>Name: {info.name}</li>}
         {info.location && <li>{info.location}</li>}
         {info.company && <li>{info.company}</li>}
         <li>Followers: {info.followers}</li>
